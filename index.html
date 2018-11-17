@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Traffic Net 2.0</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+
+  <!-- style files -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/Footer-with-button-logo.css">
+  <link rel="stylesheet" href="./css/mystyle.css">
+</head>
+
+
+
+<!-- Navigation Bar
+  =========================================================== -->
+
+<body>
+<div id="mydiv">
+
+  <nav class="navbar navbar-inverse" id="navbar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <div style="margin-top: 5px;">
+          &nbsp <img src="./images/textlogo.png" alt="" height=30px/> &nbsp &nbsp 
+      </div>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./index.html">&nbsp HOME &nbsp</a></li>
+        <li><a href="./dataset.html">&nbsp DATASETS &nbsp</a></li>
+        <li><a href="./documentation.html">&nbsp DOCUMENTATION &nbsp</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li ><a href="./terms.html">TERMS </a></li>
+        <li><a href="./citation.html">CITATION</a></li>
+        <li><a href="./contact.html">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- same for all wensites till here
+====================================================================-->
+
+
+
+<div class="jumbotron text-center" id="header"> 
+    <div id="div1">
+            <h1 id="title">Traffic Net 2.0</h1>
+            <p id="subtitle">An online scenario based database</p> 
+    </div>
+</div>
+
+<br>
+<br>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4" id="side">
+
+        <!-- side bar -->
+        <div>
+            <h3 class="h3">Quick Access<br></h3>
+
+            <ul class="nav nav-pills nav-stacked">
+                <li><a href="#">Download</a></li>
+                <li><a href="#">Sample Usage</a></li>
+                <li><a href="#">Sensor Locations</a></li>
+                <li><a href="#">Dataset Discription</a></li>
+                <li><a href="#">Data Format</a></li>
+                <li><a href="#">Frequently Asked Questions</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><br></li>
+            </ul>
+            <hr class="hidden-sm hidden-md hidden-lg">
+        </div>
+    </div>
+
+    <!-- right side -->
+    <div class="col-sm-8" id="text">
+        <p>Last updated:
+          <?php 
+          date_default_timezone_set("America/New_York");
+          echo date('d-m-Y h:i:s A')." EST"; ?>
+        </p>
+
+        <br>
+
+      <div>
+        <!-- data set part -->
+          <h2 class="intro">Datasets</h2>
+
+          <div>
+              <div class="row">
+                  <div class="col-sm-6">
+                     <img class="img-responsive" src="./images/data1.PNG" alt="" height=190px/>
+                  </div>
+                  <div class="col-sm-6">
+                      <img class="img-responsive" src="./images/data2.PNG" alt="" height=190px/> 
+                  </div>
+              </div>
+          <br>
+          <p> Our data set is a multitude of publicly-available driving datasets
+              and data platforms have been raised for autonomous vehicles
+              (AV). However, the heterogeneities of databases in size, structure
+              and driving context make existing datasets practically ineffective
+              due to a lack of uniform frameworks and searchable indexes. In
+              order to overcome these limitations on existing public datasets ...<br>
+          <p>
+          <a href="./dataset.html">View and download the available datasets ›</a>
+          </div>
+
+          <br>
+          <br>
+
+          <!-- documentation part -->
+          <div> 
+            <h2 class="intro">Documentation</h2>
+            <br>
+            
+            <p class="hh" >Data collection: MKZ platform with the equipped sensors and devices </p>
+            <div class="col-sm-12">
+                    <img id="carpic" class="img-responsive" src="./images/car.PNG" alt="" height=190px/>
+            </div>
+            <!-- <img src="./images/car.PNG" alt="" height=250px/><br> -->
+            <p>The costumed Lincoln MKZ CAV research platform is equipped with multiple types of
+                sensors, including DSRC, By-wire Control, 2 ECUs, and other
+                ancillary equipments. The operating system of the two ECUs
+                was Linux, Ubuntu 16.04. The Robot Operation System(ROS)
+                was used as the middleware interface...</p>
+            <a href="./documentation.html">Read More ›</a>
+
+            <br><br>
+            <p class="hh">Test Routine: test trip vehicle trajectory with different scenarios</p>
+              <div class="row">
+                <div class="col-sm-6" style="padding-left: 0px; padding-right: 0px;">
+                  <img class="img-responsive" id="pic1" src="./images/explain.PNG" alt=""/><br>
+                </div>
+                <div class="col-sm-6" style="padding-left: 0px; padding-right: 0px;">
+                    <img class="img-responsive" id="pic2" src="./images/grouping.PNG" alt=""/><br>
+                  </div>
+              </div>
+            
+              <p>During the trip, the Lincoln MKZ
+                  conducted the following behaviors:
+                  1) started and made a left turn;
+                  2) went straight while following the target car;
+                  3) accelerated and changed left;
+                  4) kept the speed, went straight, and overpassed the target
+                  car;
+                  5) slowed down and made a right turn...<br>
+                  The whole behavior is segmented to eight primitives with different colors...
+              </p>
+            <a href="./documentation.html">Read More ›</a>
+          </div>
+          <br><br>
+
+          <div>
+            <h2 class="intro">Examples</h2>
+            <p>Sample uses of the dataset<p>
+            <a href="./documentation.html">More ›</a>
+          </div>
+          <br><br>
+        
+          
+          <h2 class="intro">Citation</h2>
+          <p>If you use this dataset in your research, please cite the following paper:</p>
+          <table>
+            <tr>
+            <td style="width:200px;"> <a href="./paper/A Tempt to Unify Heterogeneous Driving Databases.pdf" target="_blank">
+            <img src="./images/paper.PNG" style="width:150px" />
+            <td> J. Zhu, W. Wang, D. Zhao, "A Tempt to Unify Heterogeneous Driving Databases
+                using Traffic Primitives", 2018. </a>
+            <a href="./paper/A Tempt to Unify Heterogeneous Driving Databases.pdf" target="_blank">[PDF]</a>
+          </table>
+          
+          <br><br>
+          <h2 class="intro">Licence</h2>
+          <p>This work is licensed under a 
+            <a href="#">--- Liscense name ---</a> 
+            and is intended for non-commercial academic use. 
+            If you are interested in using the dataset for commercial purposes please <a href="./contact.html">contact us</a>.
+    </div>
+  </div>
+</div>
+
+<!-- footer -->
+<div><br><br><br>
+</div>
+    <footer id="myFooter" style="background-color: rgb(66, 65, 65)">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-1">
+                </div>
+                <div class="col-sm-2">
+                    <h2 class="logo">
+                      <img src="./images/logo.png" alt="" height=120px/>
+                    </h2>
+                </div>
+                <div class="col-sm-3">
+                    <h5>Get started</h5>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Documents</a></li>
+                        <li><a href="#">Downloads</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h5>About us</h5>
+                    <ul>
+                        <li><a href="#">Team Information</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h5>Support</h5>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Help Desk</a></li>
+                        <li><a href="#">Forums</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright" style="background-color:darkred">
+            <p>© 2018 Copyright Text </p>
+        </div>
+    </footer>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+<!-- My javascripts -->
+<script src="./js/scrolldown.js"></script>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,193 @@
+a:link {
+  color: rgb(160, 49, 49);
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size:15px;
+}
+
+/* visited link */
+a:visited {
+  color: rgb(160, 49, 49);
+}
+
+/* mouse over link */
+a:hover {
+  color: #d6835d;
+}
+
+.col-sm-6 img {
+  width: auto;
+  height: 190px;
+  margin-top: 10px;
+}
+
+#pic1 {
+  width: auto;
+  height: 280px;
+  margin-top: 10px;
+}
+
+#pic2 {
+  width: auto;
+  height: 280px;
+  margin-top: 10px;
+}
+
+#carpic {
+  width: 100%;
+  max-width:500px;
+}
+
+
+.fakeimg {
+    height: 200px;
+    background: #aaa;
+}
+
+#title { 
+    color: lightgray;
+    font-family: 'Trebuchet MS';
+    font-size: 50px;
+    }
+
+#subtitle {
+  color: lightgrey;
+}
+
+#myFooter {
+  background-color: rgb(66, 65, 65) !important;
+}
+
+.navbar {
+  background-color:darkred;
+  margin-bottom: 0; 
+}
+
+.navbar a:hover {
+  background: #3d0404 !important;
+}
+
+.navbar a:active {
+  background: #3d0404 !important;
+}
+
+#mydiv{
+  width: 100%;
+  height: 100%;
+  }
+
+#navbar {
+overflow: hidden; 
+z-index: 99;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.sticky1 {
+  position: fixed;
+  top: 70px;
+  width: 100%;
+}
+
+.hh {
+font-family: sans-serif;
+font-size: 18px;
+font-weight: bold;
+}
+
+h2 {
+  font-family: Verdana;
+  font-weight: bold;
+  color:#3d0404;
+}
+
+.h3 {
+  color:#3d0404;
+  font-family: Verdana;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+
+
+.medium-dist {
+  margin:0 auto; 
+  width:1000px; 
+}
+
+p
+{
+  font-family: "Trebuchet MS";
+  font-size: 12pt;
+  color: #3d0404;
+}
+
+
+#header {
+  background-image: url(/images/head.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin-bottom:0;
+  }
+
+#div1 {
+    width: 400px;
+    padding: 10px;
+    border: 5px solid rgb(124, 74, 74);
+    vertical-align: middle;
+    text-align: center;
+    margin: 0 auto;
+    background-color: rgba(0,0,0,.5)
+}
+
+#side {
+  background-color:rgba(126, 82, 82, 0.5);
+  position: sticky;
+  width: 18%;
+  margin-left: 0;
+  overflow: hidden;
+}
+
+
+@media only screen and (max-width: 800px) {
+  #side{
+      display: none;
+  }
+}
+
+#text {
+  margin-left: 100px;
+}
+
+@media only screen and (max-width: 800px) {
+  #text{
+      margin-left: 10%;
+      margin-right: 10%;
+  }
+}
+
+.tableNice {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tableNice .td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 5px;
+}
+
+.tableNice .tr:nth-child(even) {
+  background-color: #dddddd;
+}
