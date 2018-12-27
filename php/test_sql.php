@@ -4,6 +4,7 @@ $username = "root";
 $password = "15213";
 $dbname = "kitti_database";
 
+
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
