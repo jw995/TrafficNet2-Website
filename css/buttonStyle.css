@@ -1,0 +1,66 @@
+#buttonList {
+    list-style-type: none;
+	margin: 0 auto;
+    padding: 0;
+    display: table; 
+}
+
+#left-container a{
+    margin-left: 20px;
+    margin-left: 20px;
+	color: white;
+	height: 300px;
+	width: 350px;
+	border-radius: 40px;
+    text-align: center;
+    font-family: Verdana;
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;	
+	padding-top: 110px; 
+    display: inline-block;
+    
+    background: url(../images/singleCar.jpg);
+    background-size: 100% 100%;
+}
+
+#left-container a:hover{
+    color: black;
+    border: 0px solid white;
+    
+    background: url(../images/single.jpg);
+    background-size: 100% 100%;
+}
+#left-container {
+  display: table-cell;
+}
+
+#right-container a{
+    margin-left: 20px;
+    margin-left: 20px;
+	color: white;
+	height: 300px;
+	width: 350px;
+	border-radius: 40px;
+    text-align: center;
+    font-family: Verdana;
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;	
+	padding-top: 110px; 
+    display: inline-block;
+    
+    background: url(../images/doubleCar.jpg);
+    background-size: 100% 100%;
+}
+
+#right-container a:hover{
+    color: black;
+    border: 0px solid white;
+    
+    background: url(../images/double.jpg);
+    background-size: 100% 100%;
+}
+#right-container {
+  display: table-cell;
+}

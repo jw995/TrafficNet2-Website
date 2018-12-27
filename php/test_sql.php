@@ -1,8 +1,8 @@
 <?php
-$servername = "localhost";
-$username = "jiayi";
-$password = "efficiency";
-$dbname = "web";
+$servername = "128.2.113.165:3306";
+$username = "root";
+$password = "15213";
+$dbname = "kitti_database";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -10,35 +10,42 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } else {
-    echo "&nbsp *Connected to mySQL sever<b> ".$servername. "</b> with database <b>".$dbname."</b>.<br>"."<br>";
+    echo "&nbsp *Connected to mySQL sever<b> ".$servername. "</b> with database <b>".$dbname."</b>"."<br>"."<br>";
 }
 
 // select data using Mysql
-$sql = "SELECT * FROM data1";
+$sql = "SELECT * FROM kitti_core";
 $result = $conn->query($sql);
 
 // create a table in html
+// <table class='tableNice' border='1'>
+// table table-striped table-bordered
 echo "
-<table class='tableNice' border='1'>
-<tr class='tr'>
-<th class='th'>No.</th>
-<th class='th'>file path</th>
-<th class='th'>predict time</th>
-<th class='th'>object detected</th>
-<th class='th'>accuracy</th>
-<th class='th'>group</th>
-</tr>";
+<table id='mainTable' class='table table-striped table-bordered' 
+style='width:95%; margin-left: 5%;'>
+    <thead>
+        <tr class='tr'>
+            <th class='th'>bag ID</th>
+            <th class='th'>file ID</th>
+            <th class='th'>timestamp</th>
+            <th class='th'>latitude</th>
+            <th class='th'>longitude</th>
+            <th class='th'>forward speed</th>
+            <th class='th'>x movement speed</th>
+        </tr>
+    </thead>";
 
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = mysqli_fetch_array($result)) {
     echo "<tr class='tr'>";
-    echo "<td class='td'>" . $row['No.'] . "</td>";
-    echo "<td class='td'>" . $row['file path'] . "</td>";
-    echo "<td class='td'>" . $row['predict time'] . "</td>";
-    echo "<td class='td'>" . $row['object detected'] . "</td>";
-    echo "<td class='td'>" . $row['accuracy'] . "</td>";
-    echo "<td class='td'>" . $row['group'] . "</td>";
+    echo "<td class='td'>" . $row['bag_id'] . "</td>";
+    echo "<td class='td'>" . $row['id'] . "</td>";
+    echo "<td class='td' style='white-space: nowrap'>" . $row['timestamp'] . "</td>";
+    echo "<td class='td'>" . $row['lat'] . "</td>";
+    echo "<td class='td'>" . $row['lon'] . "</td>";
+    echo "<td class='td'>" . $row['vf'] . "</td>";
+    echo "<td class='td'>" . $row['ax'] . "</td>";
     echo "</tr>";
     }
 } else {
